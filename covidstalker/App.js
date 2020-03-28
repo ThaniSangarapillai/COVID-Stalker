@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
+
+// import logo from './assets/logo.png';
+
+let [selectedImage, setSelectedImage] = React.useState(null);
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -8,11 +13,50 @@ const instructions = Platform.select({
 
 export default class App extends Component {
   render() {
+    // 
+    const SelectImage = () => {
+      let [selectedImage, setSelectedImage] = React.useState(null);
+    };
+
+    let openImagePickerASync = async () => {
+      let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
+
+      if (permissionResult.granted === false) {
+        alert("Permission to access camera roll is required!");
+        return;
+      }
+
+      let pickerResult = await ImagePicker.launchImageLibraryAsync();
+
+      if (pickerResult.cancelled === true) {
+        return;
+      }
+
+      setSelectedImage({ localUri: pickerResult.uri });
+    }
+
+    if (selectedImage !== null) {
+      return (
+        <View style={styles.container}>
+          <Image
+            source={{ uri: selectedImage.localUri }}
+            style={styles.thumbnail}
+          />
+        </View>
+      );
+    }
+
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={{color: "#888", fontSize: 18}}>To get started, please catch COVID-19!</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style = {styles.heading}>COVID-19 Stalker</Text>
+        {/* <Image source={logo} style={{ width: 256, height: 256 }}/> */}
+        <Text style={{color: "#A00", fontSize: 20, padding: 5}}>To get started, please catch COVID-19!</Text>
+
+        <TouchableOpacity
+          onPress={openImagePickerASync}
+          style={styles.button}>
+          <Text style={styles.buttonText}>*cough*</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -35,4 +79,26 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  button: {
+    backgroundColor: "blue",
+    padding: 20,
+    borderRadius: 5,  
+  }
+  ,
+  buttonText: {
+    fontSize: 20,
+    color: "#fff",  
+  }
+  ,
+  thumbnail: {
+    width: 300,
+    height: 300,
+    resizeMode: "contain",
+  },
+  heading: {
+    textAlign: 'center',
+    margin: 5,
+    fontSize: 40,
+    fontWeight: 'bold'
+  }
 });
