@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "expo": "~36.0.0",
+    "expo-font": "^8.1.0",
     "expo-image-picker": "~8.0.1",
     "expo-sharing": "^8.1.0",
     "react": "~16.9.0",

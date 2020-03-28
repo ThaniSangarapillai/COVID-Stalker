@@ -1,62 +1,72 @@
-import React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Animated, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import * as Sharing from 'expo-sharing'
+import * as Sharing from 'expo-sharing';
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
+import { startAsync } from 'expo/build/AR';
 
 export default function App() {
-  let [selectedImage, setSelectedImage] = React.useState(null);
 
-  let openImagePickerASync = async () => {
-    let permissionResult = await ImagePicker.requestCameraRollPermissionsAsync();
+  // class App extends React.Component {
+  //   componentDidMount() {
+      
 
-    if (permissionResult.granted === false) {
-      alert("Permission to access camera roll is required!");
-      return;
-    }
+  //     this.setState({ fontLoaded: true});
+  //   }
+  // }
 
-    let pickerResult = await ImagePicker.launchImageLibraryAsync();
+  
 
-    if (pickerResult.cancelled === true) {
-      return;
-    }
+  const getFonts = () => {
+    return Font.loadAsync({
+       "quicksand": require("./assets/Quicksand-Light.ttf"),
+     });
+   };
 
-    setSelectedImage({ localUri: pickerResult.uri });
+  const [dataLoaded, setDataLoaded] = useState(false);
+
+  if (!dataLoaded) {
+    return(
+      <AppLoading
+      startAsync={getFonts} 
+      onFinish={() => setDataLoaded(true)}
+      />
+    );
   }
 
-  let openShareDialogASync = async () => {
-    if (!(await Sharing.isAvailableAsync())) {
-      alert("Uh oh, sharing isn't available on your platform.");
-      return;
-    }
+  const FadeInView = props => {
+    const [fadeAnim] = useState(new Animated.Value(0));
 
-    Sharing.shareAsync(selectedImage.localUri);
-  };
+    React.useEffect(() => {
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 1000,
+      }).start();
+    }, []);
 
-  if (selectedImage !== null) {
     return (
-      <View style={styles.container}>
-        <Image
-          source={{ uri: selectedImage.localUri }}
-          style={styles.thumbnail}
-        />
-
-        <TouchableOpacity onPress={openShareDialogASync} style={styles.button}>
-          <Text style={styles.buttonText}>Share This Image</Text>
-        </TouchableOpacity>
-      </View>
+      <Animated.View
+        style={{ ...props.style, opacity: fadeAnim, }}>
+        {props.children}
+      </Animated.View>
     );
   }
   return (
-    <View style={styles.container}>
-      <Text style = {styles.heading}>COVID-19 Stalker</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}>
+      <FadeInView style={{ resizeMode: "contain"}}>
+        <Text style={styles.heading}>Let's Get You Started On Braving the Outside World</Text>
+        <TouchableOpacity
+          onPress={() => alert("Hello!")}
+          style={styles.button}>
+          <Text style={styles.buttonText}>*cough*</Text>
+        </TouchableOpacity>
+      </FadeInView>
+
       {/* <Image source={logo} style={{ width: 256, height: 256 }}/> */}
       {/* <Text style={{color: "#A00", fontSize: 20, padding: 5}}>To get started, please catch COVID-19!</Text> */}
 
-      <TouchableOpacity
-        onPress={openImagePickerASync}
-        style={styles.button}>
-        <Text style={styles.buttonText}>*c`ough*</Text>
-      </TouchableOpacity>
+
     </View>
   );
 }
@@ -81,12 +91,12 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: "blue",
     padding: 20,
-    borderRadius: 5,  
+    borderRadius: 5,
   }
   ,
   buttonText: {
     fontSize: 20,
-    color: "#fff",  
+    color: "#fff",
   }
   ,
   thumbnail: {
@@ -97,7 +107,8 @@ const styles = StyleSheet.create({
   heading: {
     textAlign: 'center',
     margin: 5,
-    fontSize: 40,
-    fontWeight: 'bold'
+    //fontFamily: 'quicksand',
+    // fontSize: 40,
+    // fontWeight: 'bold'
   },
 });
