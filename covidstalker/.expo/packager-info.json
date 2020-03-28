@@ -1,9 +1,9 @@
 {
   "packagerPort": 19001,
-  "packagerPid": 2308,
+  "packagerPid": 10296,
   "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://ex-z45.thanisangarapillai.covidstalker.exp.direct",
-  "packagerNgrokUrl": "https://packager.ex-z45.thanisangarapillai.covidstalker.exp.direct",
-  "ngrokPid": 9040,
+  "expoServerNgrokUrl": "https://pz-ue4.thanisangarapillai.covidstalker.exp.direct",
+  "packagerNgrokUrl": "https://packager.pz-ue4.thanisangarapillai.covidstalker.exp.direct",
+  "ngrokPid": 2920,
   "devToolsPort": 19002
 }
