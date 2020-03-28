@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
 
 // import logo from './assets/logo.png';
 
-let [selectedImage, setSelectedImage] = React.useState(null);
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -14,6 +12,37 @@ const instructions = Platform.select({
 export default class App extends Component {
   render() {
     // 
+
+    //Gets location from user
+
+  state = {
+    location: {},
+    errorMessage: ' ',
+  };
+
+  componentDidMount() {
+    this._getLocation();
+  }
+
+  _getLocation = async => {
+    const { status } = await Permissions.askAsync(Permissions.location);
+    
+    if (status !== 'granted') {
+      console.log('Permission Denied!');
+
+      this.setState({
+        errorMessage: 'Permission Denied!'
+      });
+    }
+
+    const location = await Location.getCurrentPositionAsync();
+    this.setState({
+      location
+    });
+  };
+
+
+
     const SelectImage = () => {
       let [selectedImage, setSelectedImage] = React.useState(null);
     };

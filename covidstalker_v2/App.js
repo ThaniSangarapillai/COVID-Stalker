@@ -5,6 +5,8 @@ import * as Sharing from 'expo-sharing';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 import { startAsync } from 'expo/build/AR';
+import * as Permissions from 'expo-permissions';
+import * as Location from 'expo-location';
 
 export default function App() {
 
@@ -16,6 +18,33 @@ export default function App() {
   //   }
   // }
 
+  //Gets location from user
+
+  state = {
+    location: {},
+    errorMessage: ' ',
+  };
+
+  componentDidMount() {
+    this._getLocation();
+  }
+
+  _getLocation = async => {
+    const { status } = await Permissions.askAsync(Permissions.location);
+    
+    if (status !== 'granted') {
+      console.log('Permission Denied!');
+
+      this.setState({
+        errorMessage: 'Permission Denied!'
+      });
+    }
+
+    const location = await Location.getCurrentPositionAsync();
+    this.setState({
+      location
+    });
+  };
   
 
   const getFonts = () => {
@@ -56,6 +85,7 @@ export default function App() {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'white' }}>
       <FadeInView style={{ resizeMode: "contain"}}>
         <Text style={styles.heading}>Let's Get You Started On Braving the Outside World</Text>
+        <Text>{JSON.stringify(this.state.location)}</Text>
         <TouchableOpacity
           onPress={() => alert("Hello!")}
           style={styles.button}>
