@@ -4,12 +4,17 @@ import{
     Text,
     StyleSheet
 } from "react-native";
+import { Icon, Button, Container, Header, Content, Left } from 'native-base';
 
-class componentName extends Component{
+class MapScreen extends Component{
     render(){
         return (
-            <View>
-            </View>
+            <Container>
+                <Content>
+                    <Text>Map</Text>
+                </Content>
+            </Container>
         );
     }
 }
+export default MapScreen;

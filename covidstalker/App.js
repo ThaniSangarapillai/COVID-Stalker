@@ -5,10 +5,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { DrawerNavigator } from 'react-navigation';
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
-//import MapView from 'react-native-maps';
 
-import MapScreen from './Components/MapScreen.js'
-//import {Header, Left, Button, Icon,Body,Title,Right,Fab} from 'native-base';
+import HomeScreen from './HomeScreen.js';
+import MapScreen from './Components/MapScreen.js';
 // import logo from './assets/logo.png';
 
 
@@ -20,7 +19,7 @@ const instructions = Platform.select({
 const Stack = createStackNavigator();
 
 /*PAGES OF APP */
-function WelcomeScreen({navigation, props}){
+function WelcomeScreen({navigation}){
   return(
     <View style={styles.container}>
       <Text style = {styles.heading}>COVID-19 Stalker</Text>
