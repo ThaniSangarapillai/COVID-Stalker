@@ -13,17 +13,19 @@ class App {
 
     private euclidianDistance (row1, row2): number {
         var distance = 0.0
-        distance = Math.pow((row1 - row2), 2)
+        for (let i = 0; i < row1.length; i++) {
+            distance += Math.pow((row1[i] - row2[i]), 2)
+        }
         distance = Math.sqrt(distance)
         return distance
     }
 
     private numNearest (list): number {
         var nearest = 0
-        var origin = list[0]
+        var origin = [list[0].latitude, list[0].longitude]
         let distancelist: number[] = []
-        for (let i in list) {
-            distancelist.push(this.euclidianDistance(origin, i))
+        for (let i = 0; i < list.length; i++) {
+            distancelist.push(this.euclidianDistance(origin, [list[i].latitude, list[i].longitude]))
         }
         console.log(distancelist)
         return nearest
@@ -42,6 +44,7 @@ class App {
     }
 
     private haversine (lat1,lat2,lng1,lng2): number {
+        console.log(lat1, lat2, lng1, lng2)
         var rad = 6372.8;
         var deltaLat = this.toRad(lat2-lat1);
         var deltaLng = this.toRad(lng2-lng1);
@@ -56,17 +59,20 @@ class App {
         return degrees * (Math.PI/180);
     }
 
-    // 43.680981, -79.511822
-    private calculate(user_lat=43.680981, user_lon=-79.511822): void {
+    // 43.662896, -79.395437
+    private calculate(user_lat=43.662896, user_lon=-79.395437): void {
+        var count = 0;
         for (let i = 0; i < this.locationList.length; i++) {
-            var dist_to_point = this.haversine(user_lat, this.locationList[i][0], user_lon, this.locationList[i][1]);
+            var dist_to_point = this.haversine(user_lat, this.locationList[i].latitude, user_lon, this.locationList[i].longitude);
             console.log ("dist_to_point of index " + i + " is: " + dist_to_point);
-            if (dist_to_point <= 5){
-                console.log ("this index is within 5 km: " + i);
+            if (dist_to_point <= 1.5){
+                console.log ("latitude: " + this.locationList[i].latitude + " longitute: " + this.locationList[i].longitude);
+                console.log ("this index is within 1.5 km: " + i);
+                count += 1;
             }
         }
+        console.log("There are " + count + " people within a 1.5 km radius.")
     }
-    
 }
 
 export default new App().express

@@ -7,7 +7,7 @@ import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
 
 import HomeScreen from './HomeScreen.js';
-import MapScreen from './Components/MapScreen.js';
+import MapScreen from './MapScreen.js';
 // import logo from './assets/logo.png';
 
 
@@ -47,11 +47,13 @@ const MyApp = DrawerNavigator({
 })
 
 export default class App extends Component {
-
-  state = {
-    location: null,
-    errorMessage: null,
-  };
+  constructor(props){
+    super(props);
+    this.setState({
+        location: null,
+        errorMessage: null,
+      })
+  }
 
   componentDidMount() {
     this._getLocation();
