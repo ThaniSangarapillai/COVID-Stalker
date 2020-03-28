@@ -36,7 +36,7 @@ class App {
                 message: 'Hello World!'
             });
             this.numNearest(this.locationList);
-            this.calculate();
+            this.calculate(this.locationList[297].latitude, this.locationList[297].longitude);
         });
         this.express.use('/', router);
     }
@@ -54,16 +54,20 @@ class App {
     toRad(degrees) {
         return degrees * (Math.PI / 180);
     }
-    // 43.680981, -79.511822
-    calculate(user_lat = 43.680981, user_lon = -79.511822) {
+    // 43.662896, -79.395437
+    // radius 50 - 500
+    calculate(user_lat, user_lon) {
+        var count = 0;
         for (let i = 0; i < this.locationList.length; i++) {
             var dist_to_point = this.haversine(user_lat, this.locationList[i].latitude, user_lon, this.locationList[i].longitude);
             console.log("dist_to_point of index " + i + " is: " + dist_to_point);
-            if (dist_to_point <= 1) {
-                console.log("latitude: " + this.locationList[i].latitude + "longitute: " + this.locationList[i].longitude);
-                console.log("this index is within 1 km: " + i);
+            if (dist_to_point <= 0.51) {
+                console.log("latitude: " + this.locationList[i].latitude + " longitute: " + this.locationList[i].longitude);
+                console.log("this index is within 500 m: " + i);
+                count += 1;
             }
         }
+        console.log("There are " + count + " people within a 500 m radius."); //return count instead.
     }
 }
 exports.default = new App().express;

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { DrawerNavigator } from 'react-navigation';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
-
-import HomeScreen from './HomeScreen.js';
 import MapScreen from './MapScreen.js';
+import HomeScreen from './HomeScreen.js';
+
 // import logo from './assets/logo.png';
 
 
@@ -22,29 +22,26 @@ const Stack = createStackNavigator();
 function WelcomeScreen({navigation}){
   return(
     <View style={styles.container}>
-      <Text style = {styles.heading}>COVID-19 Stalker</Text>
-      {/*<Image source={logo} style={{ width: 256, height: 256 }}/>*/}
-      <Text style={{color: "#A00", fontSize: 20, padding: 5}}>To get started, please catch COVID-19!</Text>
-      
 
-      <TouchableOpacity
+<TouchableOpacity
+        onPress={() => navigation.openDrawer()}
+        style={styles.button}>
+        <Text style={styles.buttonText}>Menu</Text>
+       </TouchableOpacity>
+      <Text style = {styles.heading}>COVID-19 Stalker</Text>
+      
+      <Text style={{color: "#A00", fontSize: 20, padding: 5}}>To get started, please catch COVID-19!</Text>
+
+       <TouchableOpacity
         onPress={() => {navigation.navigate("Maps")}}
         style={styles.button}>
-        <Text style={styles.buttonText}>srave the outside world</Text>
+        <Text style={styles.buttonText}>brave the outside world</Text>
        </TouchableOpacity>
     </View>
   )
 }
 
-const MyApp = DrawerNavigator({
 
-  Home: {
-    screen: HomeScreen
-  },
-  Map: {
-    screen: MapScreen
-  }
-})
 
 export default class App extends Component {
   constructor(props){
@@ -73,28 +70,28 @@ export default class App extends Component {
     this.setState({
       location
     })
+    console.log(JSON.stringify(this.state.location))
   }
-
-  
 
   render() {
     // 
 
-    //Gets location from user
-    let text = "";
-    if (this.state.errorMessage) {
-      text = this.state.errorMessage;
-    } else if (this.state.location) {
-      text = JSON.stringify(this.state.location);
-      console.log(text);
-    }
+    // //Gets location from user
+    // let text = "";
+    // if (this.state.errorMessage) {
+    //   text = this.state.errorMessage;
+    // } else if (this.state.location) {
+    //   text = JSON.stringify(this.state.location);
+    //   console.log(text);
+    // }
+    const Drawer = createDrawerNavigator();
     
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="WelcomeScreen">
-           <Stack.Screen name = "Maps" component = {MapScreen}/>
-           <Stack.Screen name = "WelcomeScreen" component = {WelcomeScreen}/>
-        </Stack.Navigator>
+        <Drawer.Navigator initialRouteName="WelcomeScreen">
+           {/* <Drawer.Screen name="Maps" component={MapScreen}/> */}
+           <Drawer.Screen name="WelcomeScreen" component={WelcomeScreen}/>
+        </Drawer.Navigator>
       </NavigationContainer>
     );
   }
