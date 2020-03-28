@@ -40,11 +40,11 @@ class App {
 
         let mongodb
         const MongoClient = require('mongodb').MongoClient;
-        const uri = "mongodb+srv://Thani:<password>@covidstalker-g15s2.gcp.mongodb.net/test?retryWrites=true&w=majority";
-        const client = new MongoClient(uri, { useNewUrlParser: true , poolsize: 10 });
+        const uri = "mongodb+srv://Thani:2sNQqGhEip8uVV4@covidstalker-g15s2.gcp.mongodb.net/test?retryWrites=true&w=majority";
+        const client = new MongoClient(uri, { useNewUrlParser: true });
 
-        router.use(bodyParser.json());
-        router.use(bodyParser.urlencoded({
+        this.express.use(bodyParser.json());
+        this.express.use(bodyParser.urlencoded({
             extended: true
         }));
 
@@ -55,6 +55,8 @@ class App {
 
         var locationPoller = function (req, res, next) {
             var tempObj = req.body;
+            console.log(req);
+            console.log(tempObj)
             mongodb.collection("UserLocations").updateOne({}, {
                 $set: {
                     'user_id': tempObj.user_id,
@@ -67,6 +69,7 @@ class App {
                     res.status(500);
                     throw err;
                 } else {
+                    mongodb.collection("UserLocations").ensureIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 } )
                     next()
                 }
             });
@@ -81,22 +84,23 @@ class App {
         })
 
         router.post('/poll_location/', function (req, res) {
-            console.log(req.body);
+            console.log(req.body, "hello");
             var tempObj = req.body;
 
-            mongodb.collection("UserLocations").updateOne({}, {
-                $set: {
-                    'user_id': tempObj.user_id,
-                    'latitude': tempObj.latitude, 
-                    'longitude': tempObj.longitude, 
-                    'lastModifiedDate': new Date().getDate()
-                }
-            }, function (err, result) {
-                if (err)  {
-                    res.status(500);
-                    throw err;
-                }
-            });
+            // mongodb.collection("UserLocations").updateOne({}, {
+            //     $set: {
+            //         'user_id': tempObj.user_id,
+            //         'latitude': tempObj.latitude, 
+            //         'longitude': tempObj.longitude, 
+            //         'lastModifiedDate': new Date().getDate()
+            //     }
+            // }, function (err, result) {
+            //     if (err)  {
+            //         res.status(500);
+            //         throw err;
+            //     }
+            // });
+            // mongodb.collection("UserLocations").ensureIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 } )
             res.status(200);
         });
 

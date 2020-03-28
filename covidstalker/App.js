@@ -3,6 +3,8 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { Header } from 'react-native-elements';
+import { Left, Right, Icon } from 'native-base';
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
 import MapScreen from './MapScreen.js';
@@ -22,18 +24,18 @@ const Stack = createStackNavigator();
 function WelcomeScreen({navigation}){
   return(
     <View style={styles.container}>
+      <Header>
+        <Left>
+        <Icon name="menu" onPress={() => navigation.openDrawer()}/>
+        </Left>
+      </Header>
 
-<TouchableOpacity
-        onPress={() => navigation.openDrawer()}
-        style={styles.button}>
-        <Text style={styles.buttonText}>Menu</Text>
-       </TouchableOpacity>
       <Text style = {styles.heading}>COVID-19 Stalker</Text>
       
       <Text style={{color: "#A00", fontSize: 20, padding: 5}}>To get started, please catch COVID-19!</Text>
 
        <TouchableOpacity
-        onPress={() => {navigation.navigate("Maps")}}
+        onPress={() => {navigation.navigate("MapScreen")}}
         style={styles.button}>
         <Text style={styles.buttonText}>brave the outside world</Text>
        </TouchableOpacity>
@@ -84,6 +86,8 @@ export default class App extends Component {
     //   text = JSON.stringify(this.state.location);
     //   console.log(text);
     // }
+
+    // Side bar menu
     const Drawer = createDrawerNavigator();
     
     return (

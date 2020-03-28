@@ -4,6 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const body_parser_1 = __importDefault(require("body-parser"));
+// mongo pass : 2sNQqGhEip8uVV4
+// mongo user : Thani
 class App {
     constructor() {
         this.express = express_1.default();
@@ -31,12 +34,65 @@ class App {
     }
     mountRoutes() {
         const router = express_1.default.Router();
+        let mongodb;
+        const MongoClient = require('mongodb').MongoClient;
+        const uri = "mongodb+srv://Thani:2sNQqGhEip8uVV4@covidstalker-g15s2.gcp.mongodb.net/test?retryWrites=true&w=majority";
+        const client = new MongoClient(uri, { useNewUrlParser: true });
+        this.express.use(body_parser_1.default.json());
+        this.express.use(body_parser_1.default.urlencoded({
+            extended: true
+        }));
+        client.connect(err => {
+            mongodb = client.db("LocationDatabase");
+            // perform actions on the collection object
+        });
+        var locationPoller = function (req, res, next) {
+            var tempObj = req.body;
+            console.log(req);
+            console.log(tempObj);
+            mongodb.collection("UserLocations").updateOne({}, {
+                $set: {
+                    'user_id': tempObj.user_id,
+                    'latitude': tempObj.latitude,
+                    'longitude': tempObj.longitude,
+                    'lastModifiedDate': new Date().getDate()
+                }
+            }, function (err, result) {
+                if (err) {
+                    res.status(500);
+                    throw err;
+                }
+                else {
+                    mongodb.collection("UserLocations").ensureIndex({ "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 });
+                    next();
+                }
+            });
+        };
         router.get('/', (req, res) => {
             res.json({
                 message: 'Hello World!'
             });
             this.numNearest(this.locationList);
             this.calculate(this.locationList[297].latitude, this.locationList[297].longitude);
+        });
+        router.post('/poll_location/', function (req, res) {
+            console.log(req.body, "hello");
+            var tempObj = req.body;
+            // mongodb.collection("UserLocations").updateOne({}, {
+            //     $set: {
+            //         'user_id': tempObj.user_id,
+            //         'latitude': tempObj.latitude, 
+            //         'longitude': tempObj.longitude, 
+            //         'lastModifiedDate': new Date().getDate()
+            //     }
+            // }, function (err, result) {
+            //     if (err)  {
+            //         res.status(500);
+            //         throw err;
+            //     }
+            // });
+            // mongodb.collection("UserLocations").ensureIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 } )
+            res.status(200);
         });
         this.express.use('/', router);
     }
