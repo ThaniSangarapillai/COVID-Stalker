@@ -11,7 +11,7 @@ class MapScreen extends Component{
         return (
             <Container>           
                 <Content>
-                    <Text>Home</Text>
+                    <Text>Map</Text>
                 </Content>
             </Container>
         );

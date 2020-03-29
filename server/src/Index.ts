@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 
 client.connect(err => {
     mongodb = client.db("LocationDatabase")
-    mongodb.collection("UserLocations").createIndex({ "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 })
+    //mongodb.collection("UserLocations").createIndex({ "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 })
     // perform actions on the collection object
     var listprint = []
     mongodb.collection("UserLocations").find().forEach(function (el) {
@@ -92,6 +92,7 @@ client.connect(err => {
 
 var locationPoller = function (req, res, next) {
     var tempObj = req.body;
+    console.log(tempObj)
     mongodb.collection("UserLocations").updateOne({ "user_id": tempObj.user_id }, {
         $set: {
             'user_id': tempObj.user_id,
@@ -106,7 +107,7 @@ var locationPoller = function (req, res, next) {
 
         function (err, result) {
             if (err) {
-                res.status(500).send();
+                res.status(500).send({ result: "Error!" });
                 throw err;
             } else {
                 next()
@@ -123,7 +124,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/poll_location/', locationPoller, function (req, res) {
-    console.log(req.body, "hello");
     var tempObj = req.body;
 
     // mongodb.collection("UserLocations").updateOne({}, {
@@ -140,14 +140,54 @@ app.post('/poll_location/', locationPoller, function (req, res) {
     //     }
     // });
     // mongodb.collection("UserLocations").ensureIndex( { "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 } )
-    res.status(200).send();
+    res.status(200).send({ result: "Success!" });
 });
 
 app.post('/request_nearby/', locationPoller, function (req, res) {
     console.log(req.body)
     var tempObj = req.body
+    var listprint = []
+    let df: DataFrame
+    let location_list: Array<Object>
+    mongodb.collection("UserLocations").find().forEach(function (el) {
+        var doc = el
+        listprint.push(doc)
+    }, function () {
+        const df = new DataFrame(listprint)
+        console.log(df.toString())
 
+        var nCount = calculate(tempObj.location.latitude, tempObj.location.longitude, df, function (nCount) {
+            console.log("this is a entry:", tempObj.location.location_id, " with ", nCount.length)
+            console.log(nCount);
 
+            mongodb.collection("PopulatedLocation").updateOne({ "location_id": tempObj.location.location_id }, {
+                $set: {
+                    'location_id': tempObj.location.location_id,
+                    'latitude': tempObj.location.latitude,
+                    'longitude': tempObj.location.longitude,
+                    'nearby': nCount,
+                    'lastModifiedDate': new Date()
+                }
+            },
+                {
+                    "upsert": true
+                }, function () {
+                    
+                    mongodb.collection("PopulatedLocation").find().forEach(function (el) {
+                        var doc = el
+                        location_list.push(
+                            {
+                                'latitude': doc.latitude,
+                                'longitude': doc.longitude,
+                                'nearby': doc.nearby
+                            }
+                        );
+                    });
+                });
+        });
+
+        res.status(200).send({"hotspots": location_list});
+    });
 });
 
 var haversine = (lat1, lat2, lng1, lng2): number => {
@@ -174,7 +214,8 @@ var calculate = (user_lat, user_lon, df, callback): void => {
     nearby_users = []
     for (let y = 0; y < df.length; y++) {
         var dist_to_point = haversine(user_lat, df.get('latitude').iloc(y), user_lon, df.get('longitude').iloc(y));
-        //console.log("dist_to_point of index " + i + " is: " + dist_to_point);
+        if (user_lat === 43.6560811 && user_lon === -79.3801714)
+            console.log("dist_to_point of index " + y + " is: " + dist_to_point);
         if (dist_to_point <= 0.25) {
             //console.log(dist_to_point)
             // console.log("latitude: " + locationList[i].latitude + " longitute: " + locationList[i].longitude);
@@ -189,7 +230,7 @@ var calculate = (user_lat, user_lon, df, callback): void => {
     callback(nearby_users)
 }
 
-app.listen(port, err => {
+app.listen(port, "192.168.2.17", err => {
     if (err) {
         return console.error(err);
     }
@@ -200,13 +241,58 @@ app.listen(port, err => {
 var minutes = 5, the_interval = minutes * 60 * 1000;
 var masscompute = 0
 setInterval(function () {
-    console.log("I am doing my 5 minutes check");
+    console.log("Recomputing...............................");
     var all
     if (masscompute !== 0) {
-        mongodb.collection("PopulatedLocation").find().forEach(function (err, doc) {
-            all.push(doc)
+        var listprint = []
+        var userPrint = []
+        let df: DataFrame
+        masscompute -= 5;
+        mongodb.collection("PopulatedLocation").find().forEach(function (el) {
+            var doc = el
+            listprint.push(doc)
+        }, function () {
+            mongodb.collection("UserLocation").find().forEach(function (el) {
+                var doc = el
+                userPrint.push(doc)
+            }, function () {
+                const df = new DataFrame(listprint)
+                const uf = new DataFrame(userPrint)
+                console.log(df.toString())
+
+                const computationFrame = df.get(['latitude', 'longitude']);
+
+                //console.log(computationFrame.toString())
+                var tempList = computationFrame.values;
+                for (let i = 0; i < computationFrame.length; i++) {
+                    //console.log(tempList[i])
+                    var nCount = calculate(df.get('latitude').iloc(i), df.get('longitude').iloc(i), uf, function (nCount) {
+                        if (nCount.length >= 5) {
+                            console.log("this is a entry:", df.get('user_id').iloc(i), " with ", nCount.length)
+                            console.log(nCount);
+
+                            mongodb.collection("PopulatedLocation").updateOne({ "location_id": df.get('location_id').iloc(i) }, {
+                                $set: {
+                                    'location_id': df.get('location_id').iloc(i),
+                                    'latitude': df.get('latitude').iloc(i),
+                                    'longitude': df.get('longitude').iloc(i),
+                                    'nearby': nCount,
+                                    'lastModifiedDate': new Date()
+                                }
+                            },
+                                {
+                                    "upsert": true
+                                });
+
+                        }
+                    });
+                }
+
+            });
+
         });
-        console.log(all)
+        //console.log(df.toString())
+        //const df = new DataFrame(listprint).get(['latitude', 'longitude'])
     } else {
         masscompute = 60
         var listprint = []
@@ -254,6 +340,6 @@ setInterval(function () {
         });
         //console.log(df.toString())
         //const df = new DataFrame(listprint).get(['latitude', 'longitude'])
-
+        console.log("Completed Computations...................")
     }
 }, the_interval);
