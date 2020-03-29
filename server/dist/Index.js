@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const pandas_js_1 = require("pandas-js");
-const port = 3000;
+const PORT = process.env.PORT || 8080;
 const app = express_1.default();
 let mongodb;
 const MongoClient = require('mongodb').MongoClient;
@@ -21,11 +21,13 @@ client.connect(err => {
     //mongodb.collection("UserLocations").createIndex({ "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 })
     // perform actions on the collection object
     var listprint = [];
+    console.log("connected to DB")
     mongodb.collection("UserLocations").find().forEach(function (el) {
         el.lastModifiedDate = new Date(el.lastModifiedDate);
         var doc = el;
         mongodb.collection("UserLocations").save(el);
         listprint.push(doc);
+        console.log(listprint.toString())
     }, function () {
         console.log(".......Computing......");
         const df = new pandas_js_1.DataFrame(listprint);
@@ -143,8 +145,8 @@ app.post('/request_nearby/', locationPoller, function (req, res) {
         const df = new pandas_js_1.DataFrame(listprint);
         //console.log(df.toString())
         var nCount = calculate(tempObj.location.latitude, tempObj.location.longitude, df, function (nCount) {
-            console.log("this is a entry:", tempObj.location.location_id, " with ", nCount.length);
-            console.log(nCount);
+            //console.log("this is a entry:", tempObj.location.location_id, " with ", nCount.length)
+            //console.log(nCount);
             mongodb.collection("PopulatedLocation").updateOne({ "location_id": tempObj.location.location_id }, {
                 $set: {
                     'location_id': tempObj.location.location_id,
@@ -209,11 +211,9 @@ var calculate = (user_lat, user_lon, df, callback) => {
     //console.log("There are " + count + " people within a 500 m radius.") //return count instead.
     callback(nearby_users);
 };
-app.listen(port, "192.168.2.17", err => {
-    if (err) {
-        return console.error(err);
-    }
-    return console.log(`server is listening on ${port}`);
+app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`);
+    console.log('Press Ctrl+C to quit.');
 });
 var minutes = 5, the_interval = minutes * 60 * 1000;
 var masscompute = 0;
@@ -284,7 +284,7 @@ setInterval(function () {
                         //console.log("this is a entry:", df.get('user_id').iloc(i), " with ", nCount.length)
                         //console.log(nCount);
                         mongodb.collection("PopulatedLocation").countDocuments({ "location_id": df.get('user_id').iloc(i) }, {}, function (err, count) {
-                            console.log(nCount.toString());
+                            //console.log(nCount.toString());
                             if (err)
                                 throw err;
                             //console.log("count:", count)

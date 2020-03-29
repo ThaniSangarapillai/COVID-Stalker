@@ -6,4 +6,4 @@ const stylesheet = StyleSheet.create({
     }
   });
 
-export default stylesheet;
+export default styles;

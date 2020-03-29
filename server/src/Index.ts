@@ -6,7 +6,7 @@ import fs from 'fs';
 import { Series, DataFrame } from 'pandas-js';
 import Immutable from 'immutable-js';
 
-const port = 3000
+const PORT = process.env.PORT || 8080;
 
 const app = express()
 
@@ -159,8 +159,8 @@ app.post('/request_nearby/', locationPoller, function (req, res) {
         //console.log(df.toString())
 
         var nCount = calculate(tempObj.location.latitude, tempObj.location.longitude, df, function (nCount) {
-            console.log("this is a entry:", tempObj.location.location_id, " with ", nCount.length)
-            console.log(nCount);
+            //console.log("this is a entry:", tempObj.location.location_id, " with ", nCount.length)
+            //console.log(nCount);
 
             mongodb.collection("PopulatedLocation").updateOne({ "location_id": tempObj.location.location_id }, {
                 $set: {
@@ -174,7 +174,7 @@ app.post('/request_nearby/', locationPoller, function (req, res) {
                 {
                     "upsert": true
                 }, function () {
-                    
+
                     mongodb.collection("PopulatedLocation").find().forEach(function (el) {
                         var doc = el
                         location_list.push(
@@ -184,17 +184,17 @@ app.post('/request_nearby/', locationPoller, function (req, res) {
                                 'nearby': doc.nearby.length
                             }
                         );
-                        
+
                     }, function (err) {
                         if (err) throw err;
-                        res.json({"hotspots": location_list});
+                        res.json({ "hotspots": location_list });
                     });
 
-                    
+
                 });
         });
 
-       //res.status(500).send({"hotspots": null})
+        //res.status(500).send({"hotspots": null})
     });
 });
 
@@ -238,12 +238,9 @@ var calculate = (user_lat, user_lon, df, callback): void => {
     callback(nearby_users)
 }
 
-app.listen(port, "192.168.2.17", err => {
-    if (err) {
-        return console.error(err);
-    }
-
-    return console.log(`server is listening on ${port}`);
+app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`);
+    console.log('Press Ctrl+C to quit.');
 });
 
 var minutes = 5, the_interval = minutes * 60 * 1000;
@@ -323,7 +320,7 @@ setInterval(function () {
                         //console.log("this is a entry:", df.get('user_id').iloc(i), " with ", nCount.length)
                         //console.log(nCount);
                         mongodb.collection("PopulatedLocation").countDocuments({ "location_id": df.get('user_id').iloc(i) }, {}, function (err, count) {
-                            console.log(nCount.toString());
+                            //console.log(nCount.toString());
                             if (err) throw err;
                             //console.log("count:", count)
                             if (count === 0) {
