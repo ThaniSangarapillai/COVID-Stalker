@@ -47,9 +47,9 @@ function WelcomeScreen({ navigation }) {
         </Left>
       </Header>
 
-      <Text style={styles.heading}>COVID-19 Social Distancer</Text>
+      <Text style={styles.heading}>ViMAPS</Text>
       <Image style = {{width: 150, height: 150, margin: 30}}source = {logo}/>
-      <Text style={{ color: "#A00", fontSize: 20, padding: 5 }}>Make your next outing safer</Text>
+      <Text style={{ color: "#adadad", fontSize: 20, padding: 5 }}>Make your next outing safer</Text>
 
       <TouchableOpacity
         onPress={() => { navigation.navigate('MapScreen') }}
@@ -213,10 +213,11 @@ const styles = StyleSheet.create(
      resizeMode: "contain",
    },
    heading: {
+
+     fontFamily:'sans-serif-thin',
     // flex: 1,
      textAlign: 'center',
-     margin: 5,
-     fontSize: 40,
-     fontWeight: 'bold'
+     margin: 15,
+     fontSize: 40
    }
  });

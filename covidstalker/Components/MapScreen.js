@@ -23,41 +23,22 @@ class MapScreen extends Component {
       searchTimeout: null, //timeout to prevent search spamming
       dest: {}, //destination data
       route: [],
-      circles: [{key: 0, center: {latitude: 0, longitude:0}}]
+      circles: [{ center: { latitude: 0, longitude: 0 }, num: 0 }]
     };
   }
   componentDidMount() {
     this._getLocation();
 
   }
-  sendLocation = ()=>{
-    fetch('http://192.168.2.17:3000/poll_location', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        user_id: Constants.deviceId,
-        latitude: this.state.location.latitude,
-        longitude: this.state.location.longitude
-      }),
-    })
-      .then(async response => {
-                // check for error response
-        if (!response.ok) {
-          // get error message from body or default to response status
-          const error = (data && data.message) || response.status;
-          return Promise.reject(error);
-        }
-        const data = await response.json();
-
-        //this.setState({ postId: data.id })
-      })
-      .catch(error => {
-        this.setState({ errorMessage: error });
-        console.error('There was an error!', error);
-      });
+  addCircles = (data) => {
+    num = data.nearby.length
+    let center = {
+      latitude: data.latitude,
+      longitude: data.longitude
+    }
+    this.state.circles.push({ center, num });
   }
+
   _getLocation = async () => {
 
     const { status } = await Permissions.askAsync(Permissions.LOCATION);
@@ -152,6 +133,53 @@ class MapScreen extends Component {
     //   .catch(error => {
     //     console.error('There was an error!', error);
     //   });
+
+
+    //FETCH RESPONSE FOR PLOTTING HOTSPOTS 
+    // fetch('http://192.168.2.17:3000/request_nearby', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    // body: JSON.stringify({
+    //   user_id: Constants.deviceId,
+    //   latitude: this.state.dest.latitude,
+    //   longitude: this.state.dest.longitude,
+    //   location: {
+    //     latitude: this.state.dest.latitude,
+    //     longitude: this.state.dest.longitude,
+    //     location_id: this.state.dest.place_id
+    //   }
+    // }),
+    // })
+    //   .then(async response => {
+    //     console.log(JSON.stringify(response));
+    //             // check for error response
+    //     if (!response.ok) {
+    //       // get error message from body or default to response status
+    //       const error = (data && data.message) || response.status;
+    //       return Promise.reject(error);
+    //     }
+    //     const data = await response.json();
+
+
+    //     let max = 0;
+    //     if(data.hotspots.length > 10){
+    //       max = 10;
+    //     }else{
+    //       max = data.hotspots.length;
+    //     }
+    //     for(let i = 0; i < max; i++){
+    //       this.addCircles(data.hotspots[i]);
+    //     }
+
+
+
+    //this.setState({ postId: data.id })
+    //     })
+    //     .catch(error => {
+    //       console.error('There was an error!', error);
+    //     });
   }
   updateSearch = search => {
     this.setState({ search });
@@ -166,16 +194,34 @@ class MapScreen extends Component {
     let latitude, longitude;
     latitude = 0;
     longitude = 0;
-
     if (this.state.location) {
       latitude = this.state.location.latitude;
       longitude = this.state.location.longitude;
     }
     const marker = this.state.dest.latitude && this.state.dest.longitude ? <MapView.Marker key={1} coordinate={{ longitude: this.state.dest.longitude, latitude: this.state.dest.latitude }} pinColor='red' title='Your Destination'></MapView.Marker> : null;
+    let i = 0;
+    let fillColor = "";
+    let strokColor = "";
+    const circles = this.state.circles.map(c => {
+
+      if (c.num < 4) {
+        fillColor = 'rgba(' + (103 + 10 * c.num) + ',' + (194 - 10 * c.num) + ',' + (100 - 10 * c.num) + ',' + 0.3 + ')';
+        strokeColor = '#46ab3a';
+      } else {
+        fillColor = 'rgba(' + (103 + 10 * c.num) + ',' + (194 - 10 * c.num) + ',' + (100 - 10 * c.num) + ',' + 0.3 + ')';
+        strokeColor = '#ff5e00';
+      }
+      return (
+        <MapView.Circle key={i++} center={c.center}
+          radius={500}
+          strokeWidth={1}
+          strokeColor={strokeColor}
+          fillColor={fillColor} />)
+    });
 
     return (
       <View>
-        <Header containerStyle = {{backgroundColor: '#ff924e'}}>
+        <Header containerStyle={{ backgroundColor: '#ff924e' }}>
           <Left>
             <Icon style={{ color: "#ffffff" }} name="menu" onPress={() => alert("haha")} />
           </Left>
@@ -192,17 +238,10 @@ class MapScreen extends Component {
             longitudeDelta: 0.034
           }}
           showsUserLocation={true}
-          
+
         >
           {marker}
-          {this.state.circles.map(c=>{
-            return(    
-            <MapView.Circle key = {1} center = {c.center}
-              radius = { 100 }
-              strokeWidth = { 1 }
-              strokeColor = { '#ff5e00' }
-              fillColor = { 'rgba(255,94,0,0.3)' }/>)
-          })}
+          {circles}
         </MapView>
       </View>
     )
