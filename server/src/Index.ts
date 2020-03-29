@@ -6,7 +6,7 @@ import fs from 'fs';
 import { Series, DataFrame } from 'pandas-js';
 import Immutable from 'immutable-js';
 
-const PORT = process.env.PORT || 8080;
+const port = 3000
 
 const app = express()
 
@@ -94,7 +94,7 @@ client.connect(err => {
 
 var locationPoller = function (req, res, next) {
     var tempObj = req.body;
-    console.log(tempObj)
+    //console.log(tempObj)
     mongodb.collection("UserLocations").updateOne({ "user_id": tempObj.user_id }, {
         $set: {
             'user_id': tempObj.user_id,
@@ -223,7 +223,7 @@ var calculate = (user_lat, user_lon, df, callback): void => {
     for (let y = 0; y < df.length; y++) {
         var dist_to_point = haversine(user_lat, df.get('latitude').iloc(y), user_lon, df.get('longitude').iloc(y));
         if (user_lat === 43.6560811 && user_lon === -79.3801714)
-            console.log("dist_to_point of index " + y + " is: " + dist_to_point);
+            //console.log("dist_to_point of index " + y + " is: " + dist_to_point);
         if (dist_to_point <= 0.1) {
             //console.log(dist_to_point)
             // console.log("latitude: " + locationList[i].latitude + " longitute: " + locationList[i].longitude);
@@ -238,9 +238,10 @@ var calculate = (user_lat, user_lon, df, callback): void => {
     callback(nearby_users)
 }
 
-app.listen(PORT, () => {
-    console.log(`App listening on port ${PORT}`);
-    console.log('Press Ctrl+C to quit.');
+app.listen(port, "192.168.2.17", err => {
+    if (err) {
+        return console.error(err);
+    }
 });
 
 var minutes = 5, the_interval = minutes * 60 * 1000;

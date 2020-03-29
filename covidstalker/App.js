@@ -9,7 +9,7 @@ import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
 import MapScreen from './Components/MapScreen.js';
 import Constants from 'expo-constants';
-import style from './stylesheet.js'
+//import style from './stylesheet.js'
 //import HomeScreen from './WelcomeScreen.js';
 //import WelcomeScreen from './Components/WelcomeScreen';
  import logo from './assets/bestlogo.png';
@@ -99,34 +99,34 @@ export default class App extends Component {
     this.setState({
       location
     })
-    //if (location.latitude && location.longitude) {
-      // fetch('http://192.168.2.17:3000/poll_location', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({
-      //     user_id: Constants.deviceId,
-      //     latitude: this.state.location.latitude,
-      //     longitude: this.state.location.longitude
-      //   }),
-      // })
-      //   .then(async response => {
-      //     console.log(JSON.stringify(response));
-      //     // check for error response
-      //     if (!response.ok) {
-      //       // get error message from body or default to response status
-      //       const error = (data && data.message) || response.status;
-      //       return Promise.reject(error);
-      //     }
-      //     const data = await response.json();
+    if (location.latitude && location.longitude) {
+      fetch('http://192.168.2.17:8080/poll_location', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          user_id: Constants.deviceId,
+          latitude: this.state.location.latitude,
+          longitude: this.state.location.longitude
+        }),
+      })
+        .then(async response => {
+          console.log(JSON.stringify(response));
+          // check for error response
+          if (!response.ok) {
+            // get error message from body or default to response status
+            const error = (data && data.message) || response.status;
+            return Promise.reject(error);
+          }
+          const data = await response.json();
 
-      //     //this.setState({ postId: data.id })
-      //   })
-      //   .catch(error => {
-      //     console.error('There was an error!', error);
-      //   });
-    //}
+          //this.setState({ postId: data.id })
+        })
+        .catch(error => {
+          console.error('There was an error!', error);
+        });
+    }
 
   }
 

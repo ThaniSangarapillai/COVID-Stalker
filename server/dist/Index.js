@@ -21,13 +21,11 @@ client.connect(err => {
     //mongodb.collection("UserLocations").createIndex({ "lastModifiedDate": 1 }, { expireAfterSeconds: 3600 })
     // perform actions on the collection object
     var listprint = [];
-    console.log("connected to DB")
     mongodb.collection("UserLocations").find().forEach(function (el) {
         el.lastModifiedDate = new Date(el.lastModifiedDate);
         var doc = el;
         mongodb.collection("UserLocations").save(el);
         listprint.push(doc);
-        console.log(listprint.toString())
     }, function () {
         console.log(".......Computing......");
         const df = new pandas_js_1.DataFrame(listprint);
@@ -87,7 +85,7 @@ client.connect(err => {
 // }
 var locationPoller = function (req, res, next) {
     var tempObj = req.body;
-    console.log(tempObj);
+    //console.log(tempObj)
     mongodb.collection("UserLocations").updateOne({ "user_id": tempObj.user_id }, {
         $set: {
             'user_id': tempObj.user_id,
@@ -198,20 +196,20 @@ var calculate = (user_lat, user_lon, df, callback) => {
     for (let y = 0; y < df.length; y++) {
         var dist_to_point = haversine(user_lat, df.get('latitude').iloc(y), user_lon, df.get('longitude').iloc(y));
         if (user_lat === 43.6560811 && user_lon === -79.3801714)
-            console.log("dist_to_point of index " + y + " is: " + dist_to_point);
-        if (dist_to_point <= 0.1) {
-            //console.log(dist_to_point)
-            // console.log("latitude: " + locationList[i].latitude + " longitute: " + locationList[i].longitude);
-            // console.log("this index is within 500 m: " + i);
-            count += 1;
-            nearby_users.push(df.get("user_id").iloc(y));
-        }
+            //console.log("dist_to_point of index " + y + " is: " + dist_to_point);
+            if (dist_to_point <= 0.1) {
+                //console.log(dist_to_point)
+                // console.log("latitude: " + locationList[i].latitude + " longitute: " + locationList[i].longitude);
+                // console.log("this index is within 500 m: " + i);
+                count += 1;
+                nearby_users.push(df.get("user_id").iloc(y));
+            }
         //console.log(count)
     }
     //console.log("There are " + count + " people within a 500 m radius.") //return count instead.
     callback(nearby_users);
 };
-app.listen(PORT, () => {
+app.listen(3000, "192.168.2.17", () => {
     console.log(`App listening on port ${PORT}`);
     console.log('Press Ctrl+C to quit.');
 });

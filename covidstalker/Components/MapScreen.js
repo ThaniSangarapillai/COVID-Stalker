@@ -10,6 +10,7 @@ import { Header } from 'react-native-elements';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Left, Right, Icon, Container } from 'native-base';
 import Constants from 'expo-constants';
+//import { hostname } from 'os';
 /* side menu? */
 const Drawer = createDrawerNavigator();
 
@@ -31,7 +32,7 @@ class MapScreen extends Component {
 
   }
   addCircles = (data) => {
-    num = data.nearby.length
+    var num = data.nearby.length
     let center = {
       latitude: data.latitude,
       longitude: data.longitude
@@ -102,85 +103,78 @@ class MapScreen extends Component {
 
 
     //send ur data to server 
-    // fetch('http://192.168.2.17:3000/poll_location', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // body: JSON.stringify({
-    //   user_id: Constants.deviceId,
-    //   latitude: this.state.dest.latitude,
-    //   longitude: this.state.dest.longitude,
-    //   location: {
-    //     latitude: this.state.dest.latitude,
-    //     longitude: this.state.dest.longitude,
-    //     location_id: this.state.dest.place_id
-    //   }
-    // }),
-    // })
-    //   .then(async response => {
-    //     console.log(JSON.stringify(response));
-    //             // check for error response
-    //     if (!response.ok) {
-    //       // get error message from body or default to response status
-    //       const error = (data && data.message) || response.status;
-    //       return Promise.reject(error);
-    //     }
-    //     const data = await response.json();
+      // fetch('http://192.168.2.17:3000/poll_location', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     user_id: Constants.deviceId,
+      //     latitude: this.state.dest.latitude,
+      //     longitude: this.state.dest.longitude,
+      //     location: {
+      //       latitude: this.state.dest.latitude,
+      //       longitude: this.state.dest.longitude,
+      //       location_id: this.state.dest.place_id
+      //     }
+      //   }),
+      // })
+      //   .then(async response => {
+      //     console.log(JSON.stringify(response));
+      //     // check for error response
+      //     if (!response.ok) {
+      //       // get error message from body or default to response status
+      //       const error = (data && data.message) || response.status;
+      //       return Promise.reject(error);
+      //     }
+      //     const data = await response.json();
 
-    //     //this.setState({ postId: data.id })
-    //   })
-    //   .catch(error => {
-    //     console.error('There was an error!', error);
-    //   });
+      //     //this.setState({ postId: data.id })
+      //   })
+      //   .catch(error => {
+      //     console.error('There was an error!', error);
+      //   });
 
 
     //FETCH RESPONSE FOR PLOTTING HOTSPOTS 
-    // fetch('http://192.168.2.17:3000/request_nearby', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // body: JSON.stringify({
-    //   user_id: Constants.deviceId,
-    //   latitude: this.state.dest.latitude,
-    //   longitude: this.state.dest.longitude,
-    //   location: {
-    //     latitude: this.state.dest.latitude,
-    //     longitude: this.state.dest.longitude,
-    //     location_id: this.state.dest.place_id
-    //   }
-    // }),
-    // })
-    //   .then(async response => {
-    //     console.log(JSON.stringify(response));
-    //             // check for error response
-    //     if (!response.ok) {
-    //       // get error message from body or default to response status
-    //       const error = (data && data.message) || response.status;
-    //       return Promise.reject(error);
-    //     }
-    //     const data = await response.json();
+    fetch('http://192.168.2.17:3000/request_nearby', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        user_id: Constants.deviceId,
+        latitude: this.state.dest.latitude,
+        longitude: this.state.dest.longitude,
+        location: {
+          latitude: this.state.dest.latitude,
+          longitude: this.state.dest.longitude,
+          location_id: this.state.dest.place_id
+        }
+      }),
+    })
+      .then(async response => {
+        console.log(JSON.stringify(response));
+        // check for error response
+        if (!response.ok) {
+          // get error message from body or default to response status
+          const error = (data && data.message) || response.status;
+          return Promise.reject(error);
+        }
+        const data = await response.json();
 
 
-    //     let max = 0;
-    //     if(data.hotspots.length > 10){
-    //       max = 10;
-    //     }else{
-    //       max = data.hotspots.length;
-    //     }
-    //     for(let i = 0; i < max; i++){
-    //       this.addCircles(data.hotspots[i]);
-    //     }
-
-
-
-    //this.setState({ postId: data.id })
-    //     })
-    //     .catch(error => {
-    //       console.error('There was an error!', error);
-    //     });
+        console.log(data)
+        for (let i = 0; i < data.hotspots.length; i++) {
+          this.addCircles(data.hotspots[i]);
+        }
+      })
+      .catch(error => {
+        console.error('There was an error!', error);
+      });
   }
+
+
   updateSearch = search => {
     this.setState({ search });
     clearTimeout(this.state.searchTimeout);
