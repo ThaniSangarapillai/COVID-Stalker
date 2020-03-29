@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
 import MapView from 'react-native-maps';
+import {Marker} from 'react-native-maps';
 import { View } from 'native-base';
 import {SearchBar} from 'react-native-elements';   
 import {Alert} from 'react-native';
-import decode from './RouteDecode';
+import { Header } from 'react-native-elements';
 class MapScreen extends Component{
     constructor(){
       super();
@@ -15,9 +16,20 @@ class MapScreen extends Component{
         search: '',
         searchTimeout: null, //timeout to prevent search spamming
         dest:{}, //destination data
-        route: []
+        route: [],
+        markers: []
       };
     }
+    renderRoute (coordinates, i) {
+      return (
+          <MapView.Polyline
+            key={i}
+            coordinates={coordinates}
+            strokeColor={'blue'}
+            strokeWidth={4}
+          />
+      );
+  }
   
     componentDidMount() {
       this._getLocation();
@@ -61,14 +73,19 @@ class MapScreen extends Component{
       }
       this.setState(
         {
-          dest: {address: resObj.formatted_address, longitude: resObj.geometry.location.lng, latitude: resObj.geometry.location.lat}
+          dest: 
+          {address: resObj.formatted_address, 
+           longitude: resObj.geometry.location.lng, 
+           latitude: resObj.geometry.location.lat
+          }
         }
       );
+      console.log(this.state.dest);
       Alert.alert(
         `Routing to ${search}`,
         this.state.dest.address,
         [
-          { text: 'OK', onPress: () => console.log('OK Pressed') },
+          { text: 'OK' },
         ],
         { cancelable: false }
       );
@@ -78,16 +95,6 @@ class MapScreen extends Component{
       console.error(error);
     });
 
-    fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${this.state.location.latitude},${this.state.location.longitude}&destination=${this.state.dest.latitude},${this.state.dest.longitude}&key=AIzaSyA1ZRbmrfVoexPgAOYXWk3lIY4OkjSGNSE`)
-      .then(response=>response.json())
-      .then(responseJson=>{
-        if(responseJson.error_message){
-          alert(responseJson.error_message);
-        }
-        alert("...??");
-        this.setState({route: decode(responseJson)})
-      }).catch(err=> console.log("??????"+err));
-      console.log(this.state.route);
     return;
   }
   updateSearch = search => {
@@ -107,14 +114,15 @@ class MapScreen extends Component{
         latitude = this.state.location.latitude;
         longitude = this.state.location.longitude;
       }
-
+      const marker =this.state.dest.latitude &&this.state.dest.longitude ?<MapView.Marker key = {1} coordinate = {{longitude: this.state.dest.longitude, latitude:this.state.dest.latitude}} pinColor = 'red' title = 'Your Destination'></MapView.Marker> : null;
       return(
         <View>
+            <Header></Header>
             <View>
-              <SearchBar placeholder = "Find destination..." value = {this.state.search} onChangeText = {this.updateSearch}/>
+              <SearchBar showLoadingIcon = {true} lightTheme = {true} placeholder = "Find destination..." value = {this.state.search} onChangeText = {this.updateSearch}/>
           </View>
           <MapView 
-              style={{ alignSelf: 'stretch', height: '90%'}}
+              style={{ alignSelf: 'stretch', height: '80%'}}
               region={{
                 latitude: latitude,
                 longitude: longitude,
@@ -123,21 +131,10 @@ class MapScreen extends Component{
               }}
               showsUserLocation = {true}
               >
+            {marker}
           </MapView>
-
         </View>
       )
     }
-
-    // var POI = new google.maps.Circle({
-    //   strokeColor: '#FF0000',
-    //   strokeOpacity: 0.8,
-    //   strokeWeight: 2,
-    //   fillColor: '#FF0000',
-    //   fillOpacity: 0.35,
-    //   // map: map, // map object 
-    //   center: ,
-    //   radius: 500
-    // })
 }
 export default MapScreen;

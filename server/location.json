@@ -1,0 +1,2102 @@
+[
+   {
+      "user_id":0,
+      "latitude":43.70437620886015,
+      "longitude":-79.46260343923706,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":1,
+      "latitude":43.70063258405082,
+      "longitude":-79.32245643461869,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":2,
+      "latitude":43.69006980135963,
+      "longitude":-79.31487748136223,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":3,
+      "latitude":43.68581470985806,
+      "longitude":-79.44825599158543,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":4,
+      "latitude":43.69939650103229,
+      "longitude":-79.43118822811014,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":5,
+      "latitude":43.68303028946789,
+      "longitude":-79.54425127037383,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":6,
+      "latitude":43.69833930805231,
+      "longitude":-79.42445900265092,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":7,
+      "latitude":43.70529201180834,
+      "longitude":-79.537315568012,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":8,
+      "latitude":43.681611055555884,
+      "longitude":-79.33718084079229,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":9,
+      "latitude":43.69623843948101,
+      "longitude":-79.38792102933972,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":10,
+      "latitude":43.68779778072292,
+      "longitude":-79.37832640946087,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":11,
+      "latitude":43.69871131559772,
+      "longitude":-79.3487735982592,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":12,
+      "latitude":43.68253379023801,
+      "longitude":-79.3055368668706,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":13,
+      "latitude":43.69232140776469,
+      "longitude":-79.29553910580294,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":14,
+      "latitude":43.685234015903596,
+      "longitude":-79.31411100479558,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":15,
+      "latitude":43.6927320380994,
+      "longitude":-79.30422711990207,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":16,
+      "latitude":43.689345034271945,
+      "longitude":-79.49532807736175,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":17,
+      "latitude":43.700922569875246,
+      "longitude":-79.45285213986554,
+      "lastModifiedDate":"2020-03-28 21:26:56.407699"
+   
+},
+   {
+      "user_id":18,
+      "latitude":43.70520217703922,
+      "longitude":-79.52149053214734,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":19,
+      "latitude":43.705730166298565,
+      "longitude":-79.54288726044679,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":20,
+      "latitude":43.68498503298998,
+      "longitude":-79.3846013713807,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":21,
+      "latitude":43.68659463925548,
+      "longitude":-79.32959440600732,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":22,
+      "latitude":43.694943771058846,
+      "longitude":-79.46691865969782,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":23,
+      "latitude":43.698307432192586,
+      "longitude":-79.53249817493496,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":24,
+      "latitude":43.69785922325613,
+      "longitude":-79.371934040816,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":25,
+      "latitude":43.69450066241162,
+      "longitude":-79.44771394426603,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":26,
+      "latitude":43.686895605270166,
+      "longitude":-79.49628774163908,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":27,
+      "latitude":43.69935440778996,
+      "longitude":-79.45598329260233,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":28,
+      "latitude":43.68955033723039,
+      "longitude":-79.45014065309988,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":29,
+      "latitude":43.69943853290196,
+      "longitude":-79.36367552914325,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":30,
+      "latitude":43.702544103598655,
+      "longitude":-79.51234315356503,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":31,
+      "latitude":43.694248078828835,
+      "longitude":-79.50714498230272,
+      "lastModifiedDate":"2020-03-28 21:26:56.408697"
+   
+},
+   {
+      "user_id":32,
+      "latitude":43.70052805633244,
+      "longitude":-79.29918254208953,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":33,
+      "latitude":43.68374695310895,
+      "longitude":-79.36532093468513,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":34,
+      "latitude":43.699666548856214,
+      "longitude":-79.44175657636187,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":35,
+      "latitude":43.688049486069644,
+      "longitude":-79.39139611658418,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":36,
+      "latitude":43.685538483090845,
+      "longitude":-79.39687151183242,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":37,
+      "latitude":43.68213220060601,
+      "longitude":-79.56199938711286,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":38,
+      "latitude":43.687744309194926,
+      "longitude":-79.42904471401259,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":39,
+      "latitude":43.699608778341194,
+      "longitude":-79.35714505541254,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":40,
+      "latitude":43.685511541959855,
+      "longitude":-79.49041851855014,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":41,
+      "latitude":43.681084889554604,
+      "longitude":-79.54875290075336,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":42,
+      "latitude":43.70075943558228,
+      "longitude":-79.38722516535455,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":43,
+      "latitude":43.69305532804133,
+      "longitude":-79.42471554903796,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":44,
+      "latitude":43.70274537437611,
+      "longitude":-79.52245166311288,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":45,
+      "latitude":43.683389982564464,
+      "longitude":-79.49905362126758,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":46,
+      "latitude":43.689573841999874,
+      "longitude":-79.49696704818467,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":47,
+      "latitude":43.70398118195661,
+      "longitude":-79.40867393191311,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":48,
+      "latitude":43.68191229521651,
+      "longitude":-79.33522066391156,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":49,
+      "latitude":43.68218783753576,
+      "longitude":-79.376269254558,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":50,
+      "latitude":43.683609894477364,
+      "longitude":-79.30957794320992,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":51,
+      "latitude":43.698885447873124,
+      "longitude":-79.36136608574787,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":52,
+      "latitude":43.68621761048583,
+      "longitude":-79.54597593487338,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":53,
+      "latitude":43.688282129848865,
+      "longitude":-79.54278498110963,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":54,
+      "latitude":43.68467043228249,
+      "longitude":-79.37930227258578,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":55,
+      "latitude":43.698250758987626,
+      "longitude":-79.3606093627064,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":56,
+      "latitude":43.69235281583859,
+      "longitude":-79.36517569318448,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":57,
+      "latitude":43.699892810643355,
+      "longitude":-79.55009394782024,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":58,
+      "latitude":43.70469428576559,
+      "longitude":-79.50196056395495,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":59,
+      "latitude":43.68511460258392,
+      "longitude":-79.32934201145062,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":60,
+      "latitude":43.694723252252736,
+      "longitude":-79.39491276914572,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":61,
+      "latitude":43.68149252427388,
+      "longitude":-79.32137785490275,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":62,
+      "latitude":43.68862345790823,
+      "longitude":-79.48300319342525,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":63,
+      "latitude":43.70577728250399,
+      "longitude":-79.35601600632722,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":64,
+      "latitude":43.693265595690185,
+      "longitude":-79.41214352868022,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":65,
+      "latitude":43.683073990803436,
+      "longitude":-79.45230425691294,
+      "lastModifiedDate":"2020-03-28 21:27:07.710572"
+   
+},
+   {
+      "user_id":66,
+      "latitude":43.69554163047418,
+      "longitude":-79.30494919615599,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":67,
+      "latitude":43.68526588531082,
+      "longitude":-79.43142069499133,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":68,
+      "latitude":43.6958597357395,
+      "longitude":-79.43534744771004,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":69,
+      "latitude":43.703114521937394,
+      "longitude":-79.55974635851547,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":70,
+      "latitude":43.701942969336734,
+      "longitude":-79.29419700431873,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":71,
+      "latitude":43.68837991566854,
+      "longitude":-79.35604500523357,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":72,
+      "latitude":43.68420797400532,
+      "longitude":-79.30690528627446,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":73,
+      "latitude":43.69467650823452,
+      "longitude":-79.49586243557289,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":74,
+      "latitude":43.682938525249284,
+      "longitude":-79.33180051204688,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":75,
+      "latitude":43.68803011438994,
+      "longitude":-79.49545562192279,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":76,
+      "latitude":43.69515244131722,
+      "longitude":-79.51198304981185,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":77,
+      "latitude":43.68585046113782,
+      "longitude":-79.34080203296449,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":78,
+      "latitude":43.70504201902708,
+      "longitude":-79.41362178108933,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":79,
+      "latitude":43.689458025686875,
+      "longitude":-79.42978567591332,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":80,
+      "latitude":43.683510480625756,
+      "longitude":-79.52728139071212,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":81,
+      "latitude":43.70474432569396,
+      "longitude":-79.43352395323318,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":82,
+      "latitude":43.6840313527147,
+      "longitude":-79.54585415496544,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":83,
+      "latitude":43.681766359441134,
+      "longitude":-79.51512867156258,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":84,
+      "latitude":43.686023018280046,
+      "longitude":-79.31305723283197,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":85,
+      "latitude":43.691965682958475,
+      "longitude":-79.28760374943653,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":86,
+      "latitude":43.69767219462037,
+      "longitude":-79.56691633002183,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":87,
+      "latitude":43.698107424106276,
+      "longitude":-79.49605332391052,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":88,
+      "latitude":43.686269840596076,
+      "longitude":-79.30226446974082,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":89,
+      "latitude":43.68993323126148,
+      "longitude":-79.48764796341617,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":90,
+      "latitude":43.69516441423664,
+      "longitude":-79.52813928583996,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":91,
+      "latitude":43.68313959456504,
+      "longitude":-79.37700283537094,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":92,
+      "latitude":43.696420321456145,
+      "longitude":-79.37699673229234,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":93,
+      "latitude":43.68282903577979,
+      "longitude":-79.47339066456192,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":94,
+      "latitude":43.705584099872866,
+      "longitude":-79.53573234636677,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":95,
+      "latitude":43.69157828815805,
+      "longitude":-79.54276539922876,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":96,
+      "latitude":43.70355451388303,
+      "longitude":-79.32053445637015,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":97,
+      "latitude":43.68671939524398,
+      "longitude":-79.51855623930092,
+      "lastModifiedDate":"2020-03-28 21:27:07.711534"
+   
+},
+   {
+      "user_id":98,
+      "latitude":43.6815688043371,
+      "longitude":-79.54844150656972,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":99,
+      "latitude":43.68699865774128,
+      "longitude":-79.5394471228398,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":100,
+      "latitude":43.70533830191652,
+      "longitude":-79.37180862021658,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":101,
+      "latitude":43.686704674844215,
+      "longitude":-79.52125016723613,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":102,
+      "latitude":43.702906223200586,
+      "longitude":-79.42070797340608,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":103,
+      "latitude":43.68864825419484,
+      "longitude":-79.52921696113052,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":104,
+      "latitude":43.68783149449077,
+      "longitude":-79.38411127916469,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":105,
+      "latitude":43.68804547379829,
+      "longitude":-79.43599252160656,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":106,
+      "latitude":43.691242144091234,
+      "longitude":-79.32020038553799,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":107,
+      "latitude":43.680593491761385,
+      "longitude":-79.39950662079073,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":108,
+      "latitude":43.691587913636475,
+      "longitude":-79.37876285828521,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":109,
+      "latitude":43.69768470029758,
+      "longitude":-79.36623282928724,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":110,
+      "latitude":43.681789115519976,
+      "longitude":-79.5098617828189,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":111,
+      "latitude":43.690691859855605,
+      "longitude":-79.34738887683241,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":112,
+      "latitude":43.68208942734167,
+      "longitude":-79.56485795835452,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":113,
+      "latitude":43.68670186330222,
+      "longitude":-79.51851137064845,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":114,
+      "latitude":43.68049514802692,
+      "longitude":-79.45250894820661,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":115,
+      "latitude":43.70583291462035,
+      "longitude":-79.40780560712103,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":116,
+      "latitude":43.69596319444249,
+      "longitude":-79.4477502336276,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":117,
+      "latitude":43.68938588123803,
+      "longitude":-79.54544488003505,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":118,
+      "latitude":43.682145139767584,
+      "longitude":-79.48606946723636,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":119,
+      "latitude":43.70234826097554,
+      "longitude":-79.45814345214318,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":120,
+      "latitude":43.69725502869695,
+      "longitude":-79.40588580653737,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":121,
+      "latitude":43.683056244704964,
+      "longitude":-79.48527502691326,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":122,
+      "latitude":43.69480280650727,
+      "longitude":-79.54458668444842,
+      "lastModifiedDate":"2020-03-28 21:27:07.712532"
+   
+},
+   {
+      "user_id":123,
+      "latitude":43.68629500821022,
+      "longitude":-79.47358867910621,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":124,
+      "latitude":43.68175713728042,
+      "longitude":-79.4847169101448,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":125,
+      "latitude":43.70382991593915,
+      "longitude":-79.31904724813677,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":126,
+      "latitude":43.699119906897955,
+      "longitude":-79.40427907549906,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":127,
+      "latitude":43.68083889736567,
+      "longitude":-79.2976764880987,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":128,
+      "latitude":43.68465591921418,
+      "longitude":-79.33628751140895,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":129,
+      "latitude":43.694503794816775,
+      "longitude":-79.3230177925719,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":130,
+      "latitude":43.687762973934426,
+      "longitude":-79.49890779927539,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":131,
+      "latitude":43.701607734801584,
+      "longitude":-79.48903816958362,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":132,
+      "latitude":43.68476597614568,
+      "longitude":-79.42959460357704,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":133,
+      "latitude":43.69120424482706,
+      "longitude":-79.31747526527484,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":134,
+      "latitude":43.70110865965892,
+      "longitude":-79.3920189574251,
+      "lastModifiedDate":"2020-03-28 21:27:07.713530"
+   
+},
+   {
+      "user_id":135,
+      "latitude":43.70111292875071,
+      "longitude":-79.30047455980711,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":136,
+      "latitude":43.70569457504539,
+      "longitude":-79.28866811444553,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":137,
+      "latitude":43.698509989589844,
+      "longitude":-79.4339824413263,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":138,
+      "latitude":43.69052384888441,
+      "longitude":-79.48064868041034,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":139,
+      "latitude":43.701339017072755,
+      "longitude":-79.54251422431742,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":140,
+      "latitude":43.70587281094839,
+      "longitude":-79.50027086561744,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":141,
+      "latitude":43.68984018239138,
+      "longitude":-79.54340429154614,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":142,
+      "latitude":43.69226786244771,
+      "longitude":-79.43735867765152,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":143,
+      "latitude":43.686133262476744,
+      "longitude":-79.53253344867788,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":144,
+      "latitude":43.685555183332504,
+      "longitude":-79.5304913406143,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":145,
+      "latitude":43.68306974749166,
+      "longitude":-79.38782889371271,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":146,
+      "latitude":43.68321439983271,
+      "longitude":-79.29447800451047,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":147,
+      "latitude":43.68356816344515,
+      "longitude":-79.35027219332056,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":148,
+      "latitude":43.68996367796463,
+      "longitude":-79.3708305574689,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":149,
+      "latitude":43.695891570260876,
+      "longitude":-79.36235275308248,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":150,
+      "latitude":43.69163320622524,
+      "longitude":-79.37464838626751,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":151,
+      "latitude":43.695648710189914,
+      "longitude":-79.34709584908633,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":152,
+      "latitude":43.6912602419749,
+      "longitude":-79.45780150641198,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":153,
+      "latitude":43.70219639169677,
+      "longitude":-79.3108462887374,
+      "lastModifiedDate":"2020-03-28 21:27:07.714527"
+   
+},
+   {
+      "user_id":154,
+      "latitude":43.698768999552925,
+      "longitude":-79.52946985532317,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":155,
+      "latitude":43.681989193414175,
+      "longitude":-79.3415467611483,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":156,
+      "latitude":43.69310515057562,
+      "longitude":-79.49513656259482,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":157,
+      "latitude":43.694533105001234,
+      "longitude":-79.46073687021998,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":158,
+      "latitude":43.69485570786863,
+      "longitude":-79.47710002097402,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":159,
+      "latitude":43.69784339241512,
+      "longitude":-79.56492468921236,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":160,
+      "latitude":43.691404157136105,
+      "longitude":-79.54120202831417,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":161,
+      "latitude":43.69606922832502,
+      "longitude":-79.34796213353214,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":162,
+      "latitude":43.69368905186147,
+      "longitude":-79.38977439546463,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":163,
+      "latitude":43.698743169576275,
+      "longitude":-79.4666857866244,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":164,
+      "latitude":43.689251380362975,
+      "longitude":-79.47825995428228,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":165,
+      "latitude":43.691340264039574,
+      "longitude":-79.39438008620019,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":166,
+      "latitude":43.705342588343285,
+      "longitude":-79.47055101834711,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":167,
+      "latitude":43.6964170421893,
+      "longitude":-79.4346055171735,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":168,
+      "latitude":43.70248929816443,
+      "longitude":-79.45082316972452,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":169,
+      "latitude":43.69725459344842,
+      "longitude":-79.44829719964963,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":170,
+      "latitude":43.702962447569256,
+      "longitude":-79.47778559126463,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":171,
+      "latitude":43.701085339488394,
+      "longitude":-79.36337353092514,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":172,
+      "latitude":43.68053058378629,
+      "longitude":-79.41404949070842,
+      "lastModifiedDate":"2020-03-28 21:27:07.716521"
+   
+},
+   {
+      "user_id":173,
+      "latitude":43.69800328566623,
+      "longitude":-79.40338740825119,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":174,
+      "latitude":43.68132478318095,
+      "longitude":-79.29675454959458,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":175,
+      "latitude":43.68489366595817,
+      "longitude":-79.42145134506151,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":176,
+      "latitude":43.69802111230942,
+      "longitude":-79.35547145927637,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":177,
+      "latitude":43.68607026013201,
+      "longitude":-79.48591523510143,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":178,
+      "latitude":43.69572680271074,
+      "longitude":-79.56403775347128,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":179,
+      "latitude":43.70304918910715,
+      "longitude":-79.45616617405553,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":180,
+      "latitude":43.68031728068718,
+      "longitude":-79.52782180262278,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":181,
+      "latitude":43.70487198221733,
+      "longitude":-79.51403332416287,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":182,
+      "latitude":43.70057625957749,
+      "longitude":-79.38095634068829,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":183,
+      "latitude":43.70110558016632,
+      "longitude":-79.42039946727934,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":184,
+      "latitude":43.685908117333945,
+      "longitude":-79.39865688683277,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":185,
+      "latitude":43.6947482621633,
+      "longitude":-79.44307646102912,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":186,
+      "latitude":43.69573090645732,
+      "longitude":-79.29846816431021,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":187,
+      "latitude":43.70503308385543,
+      "longitude":-79.29345082326019,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":188,
+      "latitude":43.70373331942076,
+      "longitude":-79.34016108628124,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":189,
+      "latitude":43.682431547190795,
+      "longitude":-79.45714819384268,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":190,
+      "latitude":43.702668689220275,
+      "longitude":-79.46190947806495,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":191,
+      "latitude":43.70527501605293,
+      "longitude":-79.4817548553015,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":192,
+      "latitude":43.684289463393135,
+      "longitude":-79.3340594493886,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":193,
+      "latitude":43.70125974811268,
+      "longitude":-79.43344363387223,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":194,
+      "latitude":43.691629116018284,
+      "longitude":-79.52787370331309,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":195,
+      "latitude":43.695972910531985,
+      "longitude":-79.47972526528507,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":196,
+      "latitude":43.69640310202857,
+      "longitude":-79.46878621129756,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":197,
+      "latitude":43.68515857438071,
+      "longitude":-79.31928945859363,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":198,
+      "latitude":43.6894871273921,
+      "longitude":-79.55265088715275,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":199,
+      "latitude":43.69243416805384,
+      "longitude":-79.29034637179852,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":200,
+      "latitude":43.700494137218705,
+      "longitude":-79.40340712775499,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":201,
+      "latitude":43.68889683317546,
+      "longitude":-79.45024877814106,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":202,
+      "latitude":43.68236712298962,
+      "longitude":-79.33668552501148,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":203,
+      "latitude":43.700614083305005,
+      "longitude":-79.5484257701431,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":204,
+      "latitude":43.69091155260398,
+      "longitude":-79.29461240089516,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":205,
+      "latitude":43.7052739035939,
+      "longitude":-79.40092245293717,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":206,
+      "latitude":43.68077179118338,
+      "longitude":-79.56333232544996,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":207,
+      "latitude":43.69421758972666,
+      "longitude":-79.50374514116953,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":208,
+      "latitude":43.68886973287489,
+      "longitude":-79.35774089596228,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":209,
+      "latitude":43.69058369713922,
+      "longitude":-79.44921683617719,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":210,
+      "latitude":43.692175756335466,
+      "longitude":-79.45400919648121,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":211,
+      "latitude":43.685215076008696,
+      "longitude":-79.32277442511894,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":212,
+      "latitude":43.68220583723506,
+      "longitude":-79.55335365119215,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":213,
+      "latitude":43.68982641360158,
+      "longitude":-79.48073694875092,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":214,
+      "latitude":43.70558885733875,
+      "longitude":-79.54978364172433,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":215,
+      "latitude":43.68362784203246,
+      "longitude":-79.42227975060935,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":216,
+      "latitude":43.68865399988365,
+      "longitude":-79.43561439274406,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":217,
+      "latitude":43.696528410089776,
+      "longitude":-79.41226142014771,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":218,
+      "latitude":43.682905778521395,
+      "longitude":-79.33888452040992,
+      "lastModifiedDate":"2020-03-28 21:27:07.717519"
+   
+},
+   {
+      "user_id":219,
+      "latitude":43.68910617939627,
+      "longitude":-79.33447091397016,
+      "lastModifiedDate":"2020-03-28 21:27:07.718516"
+   
+},
+   {
+      "user_id":220,
+      "latitude":43.70224217948517,
+      "longitude":-79.36173742248339,
+      "lastModifiedDate":"2020-03-28 21:27:07.718516"
+   
+},
+   {
+      "user_id":221,
+      "latitude":43.687186365809154,
+      "longitude":-79.31667096251427,
+      "lastModifiedDate":"2020-03-28 21:27:07.718516"
+   
+},
+   {
+      "user_id":222,
+      "latitude":43.7026577957869,
+      "longitude":-79.37189502521046,
+      "lastModifiedDate":"2020-03-28 21:27:07.718516"
+   
+},
+   {
+      "user_id":223,
+      "latitude":43.686041441194845,
+      "longitude":-79.51243274533928,
+      "lastModifiedDate":"2020-03-28 21:27:07.718516"
+   
+},
+   {
+      "user_id":224,
+      "latitude":43.68975756080269,
+      "longitude":-79.40229163453974,
+      "lastModifiedDate":"2020-03-28 21:27:07.718516"
+   
+},
+   {
+      "user_id":225,
+      "latitude":43.692360133047536,
+      "longitude":-79.37474424589774,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":226,
+      "latitude":43.69396920525545,
+      "longitude":-79.49775444066937,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":227,
+      "latitude":43.698318975718664,
+      "longitude":-79.35785625939596,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":228,
+      "latitude":43.68533034787641,
+      "longitude":-79.29409764883648,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":229,
+      "latitude":43.69731982070735,
+      "longitude":-79.29582366730719,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":230,
+      "latitude":43.67989673750448,
+      "longitude":-79.55947473592218,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":231,
+      "latitude":43.68589729571647,
+      "longitude":-79.40008540596095,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":232,
+      "latitude":43.70647847781303,
+      "longitude":-79.4957451389205,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":233,
+      "latitude":43.69585622287482,
+      "longitude":-79.46852241056312,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":234,
+      "latitude":43.6892997561241,
+      "longitude":-79.4453110097122,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":235,
+      "latitude":43.67973586247537,
+      "longitude":-79.38961390698847,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":236,
+      "latitude":43.69829590523488,
+      "longitude":-79.49564539078803,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":237,
+      "latitude":43.69978480129314,
+      "longitude":-79.54303436934657,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":238,
+      "latitude":43.68905101355676,
+      "longitude":-79.2873262912187,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":239,
+      "latitude":43.6881468912346,
+      "longitude":-79.36778198059126,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":240,
+      "latitude":43.69887093260687,
+      "longitude":-79.3194021019459,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":241,
+      "latitude":43.692526271932856,
+      "longitude":-79.49651514440271,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":242,
+      "latitude":43.685131219230406,
+      "longitude":-79.55277802968251,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":243,
+      "latitude":43.681575104371504,
+      "longitude":-79.46356628666517,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":244,
+      "latitude":43.69077288847219,
+      "longitude":-79.3953056021564,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":245,
+      "latitude":43.68223901230932,
+      "longitude":-79.55952454800777,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":246,
+      "latitude":43.69577558665314,
+      "longitude":-79.30472396130274,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":247,
+      "latitude":43.70428005560933,
+      "longitude":-79.38031175710341,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":248,
+      "latitude":43.679873154077896,
+      "longitude":-79.40734940646104,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":249,
+      "latitude":43.681639524658166,
+      "longitude":-79.46374885264893,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":250,
+      "latitude":43.70520897112598,
+      "longitude":-79.34634812551454,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":251,
+      "latitude":43.68714679687471,
+      "longitude":-79.50372260332651,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":252,
+      "latitude":43.69316387048534,
+      "longitude":-79.49914586933998,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":253,
+      "latitude":43.69241034722677,
+      "longitude":-79.5626151500805,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":254,
+      "latitude":43.68452577757343,
+      "longitude":-79.37845234319491,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":255,
+      "latitude":43.68370211393575,
+      "longitude":-79.46386566347405,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":256,
+      "latitude":43.685167397770726,
+      "longitude":-79.56065469727655,
+      "lastModifiedDate":"2020-03-28 21:27:07.719513"
+   
+},
+   {
+      "user_id":257,
+      "latitude":43.70150562118805,
+      "longitude":-79.52306458816915,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":258,
+      "latitude":43.69650114578258,
+      "longitude":-79.5554499159832,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":259,
+      "latitude":43.68613318108558,
+      "longitude":-79.36462582539455,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":260,
+      "latitude":43.70529697691636,
+      "longitude":-79.33489480440731,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":261,
+      "latitude":43.686523765959016,
+      "longitude":-79.34900406895073,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":262,
+      "latitude":43.693003563718385,
+      "longitude":-79.55063486634454,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":263,
+      "latitude":43.70437221596554,
+      "longitude":-79.36201395866581,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":264,
+      "latitude":43.699444018145996,
+      "longitude":-79.35028073410594,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":265,
+      "latitude":43.682168880046156,
+      "longitude":-79.41338040068777,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":266,
+      "latitude":43.69859718523284,
+      "longitude":-79.36386740867262,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":267,
+      "latitude":43.7001404090832,
+      "longitude":-79.32700411801075,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":268,
+      "latitude":43.68842384361055,
+      "longitude":-79.35132579641805,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":269,
+      "latitude":43.68936549557262,
+      "longitude":-79.32162342091897,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":270,
+      "latitude":43.698693536899455,
+      "longitude":-79.30541572382072,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":271,
+      "latitude":43.70098207189697,
+      "longitude":-79.50207822759403,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":272,
+      "latitude":43.686527331701974,
+      "longitude":-79.3160233939313,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":273,
+      "latitude":43.68935319115024,
+      "longitude":-79.36119440637984,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":274,
+      "latitude":43.682895954643044,
+      "longitude":-79.54747153107472,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":275,
+      "latitude":43.69351650949834,
+      "longitude":-79.31833423609555,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":276,
+      "latitude":43.68527950466233,
+      "longitude":-79.37591768145496,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":277,
+      "latitude":43.684955816607676,
+      "longitude":-79.44978880738626,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":278,
+      "latitude":43.695964926186015,
+      "longitude":-79.39335352225713,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":279,
+      "latitude":43.694753912120014,
+      "longitude":-79.30578926680845,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":280,
+      "latitude":43.68304696073948,
+      "longitude":-79.5399394504586,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":281,
+      "latitude":43.68900210876775,
+      "longitude":-79.4681950343509,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":282,
+      "latitude":43.70225934360927,
+      "longitude":-79.51096400818469,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":283,
+      "latitude":43.684440445061384,
+      "longitude":-79.33603281252628,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":284,
+      "latitude":43.69974677105933,
+      "longitude":-79.29837015913093,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":285,
+      "latitude":43.68012421035723,
+      "longitude":-79.30837297912565,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":286,
+      "latitude":43.70424023265558,
+      "longitude":-79.31993630054164,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":287,
+      "latitude":43.68299007649343,
+      "longitude":-79.38504904003989,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":288,
+      "latitude":43.704264655577056,
+      "longitude":-79.53991614192418,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":289,
+      "latitude":43.6858005243509,
+      "longitude":-79.41470246533133,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":290,
+      "latitude":43.685106328543114,
+      "longitude":-79.37405967918687,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":291,
+      "latitude":43.69208728848615,
+      "longitude":-79.44581759188668,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":292,
+      "latitude":43.69375691924209,
+      "longitude":-79.33680079255195,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":293,
+      "latitude":43.70428542981999,
+      "longitude":-79.40688921778384,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":294,
+      "latitude":43.70557843239676,
+      "longitude":-79.5350784917593,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":295,
+      "latitude":43.68482108278521,
+      "longitude":-79.3911952475999,
+      "lastModifiedDate":"2020-03-28 21:27:07.721509"
+   
+},
+   {
+      "user_id":296,
+      "latitude":43.692353889316465,
+      "longitude":-79.3477152382873,
+      "lastModifiedDate":"2020-03-28 21:27:07.722506"
+   
+},
+   {
+      "user_id":297,
+      "latitude":43.70071408877182,
+      "longitude":-79.41472673861533,
+      "lastModifiedDate":"2020-03-28 21:27:07.722506"
+   
+},
+   {
+      "user_id":298,
+      "latitude":43.687180863166134,
+      "longitude":-79.4048300646775,
+      "lastModifiedDate":"2020-03-28 21:27:07.722506"
+   
+},
+   {
+      "user_id":299,
+      "latitude":43.68016018232935,
+      "longitude":-79.44149419626909,
+      "lastModifiedDate":"2020-03-28 21:27:07.722506"
+   
+}
+]

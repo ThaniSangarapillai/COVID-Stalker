@@ -7,9 +7,9 @@ import { Header } from 'react-native-elements';
 import { Left, Right, Icon } from 'native-base';
 import * as Permissions from 'expo-permissions';
 import * as Location from 'expo-location';
-import MapScreen from './MapScreen.js';
-import HomeScreen from './HomeScreen.js';
-
+import MapScreen from './Components/MapScreen.js';
+//import HomeScreen from './WelcomeScreen.js';
+//import WelcomeScreen from './Components/WelcomeScreen';
 // import logo from './assets/logo.png';
 
 
@@ -18,15 +18,14 @@ const instructions = Platform.select({
   android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
 });
 
-const Stack = createStackNavigator();
 
 /*PAGES OF APP */
 function WelcomeScreen({navigation}){
   return(
     <View style={styles.container}>
-      <Header>
+       <Header>
         <Left>
-        <Icon name="menu" onPress={() => navigation.openDrawer()}/>
+        <Icon  style={{color: "#ffffff"}} name="menu" onPress={() => navigation.openDrawer()}/>
         </Left>
       </Header>
 
@@ -35,9 +34,9 @@ function WelcomeScreen({navigation}){
       <Text style={{color: "#A00", fontSize: 20, padding: 5}}>To get started, please catch COVID-19!</Text>
 
        <TouchableOpacity
-        onPress={() => {navigation.navigate("MapScreen")}}
+        onPress={() => {navigation.navigate('MapScreen')}}
         style={styles.button}>
-        <Text style={styles.buttonText}>brave the outside world</Text>
+        <Text style={styles.buttonText}>zzzwtf.</Text>
        </TouchableOpacity>
     </View>
   )
@@ -88,24 +87,49 @@ export default class App extends Component {
     // }
 
     // Side bar menu
-    const Drawer = createDrawerNavigator();
     
-    return (
-      <NavigationContainer>
-        <Drawer.Navigator initialRouteName="WelcomeScreen">
-           {/* <Drawer.Screen name="Maps" component={MapScreen}/> */}
-           <Drawer.Screen name="WelcomeScreen" component={WelcomeScreen}/>
-        </Drawer.Navigator>
-      </NavigationContainer>
-    );
+    
+    // return (
+    //   // <NavigationContainer>
+    //   //   <Drawer.Navigator initialRouteName="WelcomeScreen">
+    //   //      <Drawer.Screen name="Welcome" component={WelcomeScreen}/>
+    //   //      <Drawer.Screen name="MapScreen" component={MapScreen}/>
+    //   //      {/* <Drawer.Screen name="Settings" component={SettingScreen}/> */}
+    //   //      {/* <Drawer.Screen name="About" component={AboutScreen}/> */}
+    //   //   </Drawer.Navigator>
+    //   // </NavigationContainer>
+    // );
   }
 }
+const Drawer = createDrawerNavigator({
+
+  Home: {
+    screen: WelcomeScreen
+  },
+  Map: {
+    screen: MapScreen
+  }
+})
+
+  
+
+
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+   flex: 1,
+   justifyContent: 'center',
+   alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
+   // alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
