@@ -5,8 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const body_parser_1 = __importDefault(require("body-parser"));
-// mongo pass : 2sNQqGhEip8uVV4
-// mongo user : Thani
 class App {
     constructor() {
         this.express = express_1.default();
@@ -36,7 +34,7 @@ class App {
         const router = express_1.default.Router();
         let mongodb;
         const MongoClient = require('mongodb').MongoClient;
-        const uri = "mongodb+srv://Thani:2sNQqGhEip8uVV4@covidstalker-g15s2.gcp.mongodb.net/test?retryWrites=true&w=majority";
+        const uri = "mongodb+srv://Thani:@covidstalker-g15s2.gcp.mongodb.net/test?retryWrites=true&w=majority";
         const client = new MongoClient(uri, { useNewUrlParser: true });
         this.express.use(body_parser_1.default.json());
         this.express.use(body_parser_1.default.urlencoded({
